@@ -9,12 +9,16 @@ export default function Counter({initialCount=0,initialStep=1}) {
     <div>
       <p aria-live="polite"> Current Sales Count: {count}</p>
 
-      <label>Step:</label>
+      <label>Step:
       <input type="number" min="1" value={step} onChange={(event =>setStep(Number(event.target.value)))}/>
+      </label>
+
       <div>
+
       <button onClick={() => setCount(c => c + step)}> Increment </button>
       <button onClick={() => setCount(c => c - step)}disabled={count-step<0}> Decrement </button>
        <button onClick={() => setCount(initialCount)}> Reset </button>
+
        </div>
     </div>
   );
