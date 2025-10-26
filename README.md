@@ -1,4 +1,34 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Coding Project - Next.js "Button Counter" 
+
+This project creates a Next.js web app that has a reusable button counter component. It uses counter.jsx and page.js to load a counter with an increment, decrement, and reset button. Along with a custom prop counter that shows a different initial count and initial step. 
+
+## Features
+-Displays current count for default counter and custom counter.
+-Increment, Decrement, and reset buttons.
+-A step input that sets how much to add and subtract.
+-Uses props such as InitialCount and InitialStep.
+-Count region is displayed using aria-live="polite".
+-Uses useState for count and step. 
+-Has a disable decrement for when count goes below zero. 
+
+## Known Issues and Limitations 
+- Step input could go into negatives if you don't validate using numeric input and clamp to min 1. 
+- If not done properly decrement could make count go below zero if disable decrement isn't used. 
+
+## How to run Locally 
+
+npx create-next-app@latest my-next-app
+cd my-next-app
+npm install
+npm run dev
+Visit http://localhost:3000
+
+
+## How to Build
+
+npm run build - used to build production version.
+npm run start- runs production server. 
 
 ## Getting Started
 
